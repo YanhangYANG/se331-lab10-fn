@@ -1,0 +1,323 @@
+{
+  "events": [
+    {
+      "id": 123,
+      "category": "animal welfare",
+      "title": "Cat Adoption Day",
+      "description": "Find your new feline friend at this event.",
+      "location": "Meow Town",
+      "date": "January 28, 2022",
+      "time": "12:00",
+      "petsAllowed": true,
+      "organizer": "Kat Laydee"
+    },
+    {
+      "id": 456,
+      "category": "food",
+      "title": "Community Gardening",
+      "description": "Join us as we tend to the community edible plants.",
+      "location": "Flora City",
+      "date": "March 14, 2022",
+      "time": "10:00",
+      "petsAllowed": true,
+      "organizer": "Fern Pollin"
+    },
+    {
+      "id": 789,
+      "category": "sustainability",
+      "title": "Beach Cleanup",
+      "description": "Help pick up trash along the shore.",
+      "location": "Playa Del Carmen",
+      "date": "July 22, 2022",
+      "time": "11:00",
+      "petsAllowed": false,
+      "organizer": "Carey Wales"
+    },
+    {
+      "id": 1001,
+      "category": "animal welfare",
+      "title": "Dog Adoption Day",
+      "description": "Find your new canine friend at this event.",
+      "location": "Woof Town",
+      "date": "August 28, 2022",
+      "time": "12:00",
+      "petsAllowed": true,
+      "organizer": "Dawg Dahd"
+    },
+    {
+      "id": 1002,
+      "category": "food",
+      "title": "Canned Food Drive",
+      "description": "Bring your canned food to donate to those in need.",
+      "location": "Tin City",
+      "date": "September 14, 2022",
+      "time": "3:00",
+      "petsAllowed": true,
+      "organizer": "Kahn Opiner"
+    },
+    {
+      "id": 1003,
+      "category": "sustainability",
+      "title": "Highway Cleanup",
+      "description": "Help pick up trash along the highway.",
+      "location": "Highway 50",
+      "date": "July 22, 2022",
+      "time": "11:00",
+      "petsAllowed": false,
+      "organizer": "Brody Kill"
+    },
+    {
+      "id": 1004,
+      "category": "animal welfare",
+      "title": "Shelter Volunteering",
+      "description": "Assist with daily tasks at the local animal shelter.",
+      "location": "City Animal Shelter",
+      "date": "August 3, 2023",
+      "time": "10:00",
+      "petsAllowed": true,
+      "organizer": "Amy Thorn"
+    },
+    {
+      "id": 1005,
+      "category": "education",
+      "title": "Community Tutoring",
+      "description": "Provide tutoring for students in various subjects.",
+      "location": "Public Library, Meeting Room 2",
+      "date": "July 27, 2023",
+      "time": "14:00",
+      "petsAllowed": false,
+      "organizer": "James Lang"
+    },
+    {
+      "id": 1007,
+      "category": "sustainability",
+      "title": "Recycling Drive",
+      "description": "Organize and sort recyclables for proper disposal.",
+      "location": "City Recycling Center",
+      "date": "July 30, 2023",
+      "time": "09:00",
+      "petsAllowed": false,
+      "organizer": "Maxwell Sherman"
+    },
+    {
+      "id": 1008,
+      "category": "health",
+      "title": "Blood Donation Drive",
+      "description": "Donate blood to help save lives.",
+      "location": "City Hospital",
+      "date": "August 20, 2023",
+      "time": "10:00",
+      "petsAllowed": false,
+      "organizer": "Natalie Moore"
+    },
+    {
+      "id": 1009,
+      "category": "culture",
+      "title": "Art Exhibition Setup",
+      "description": "Help setup the annual community art exhibition.",
+      "location": "Community Art Center",
+      "date": "October 1, 2023",
+      "time": "12:00",
+      "petsAllowed": false,
+      "organizer": "Oscar Lee"
+    },
+    {
+      "id": 1010,
+      "category": "sustainability",
+      "title": "Beach Cleanup",
+      "description": "Help clean up the local beach and preserve marine life.",
+      "location": "Sunset Beach",
+      "date": "July 31, 2023",
+      "time": "07:00",
+      "petsAllowed": true,
+      "organizer": "Eva Dean"
+    },
+    {
+      "id": 1011,
+      "category": "community",
+      "title": "Food Drive",
+      "description": "Collect and sort food donations for the needy.",
+      "location": "City Food Bank",
+      "date": "August 14, 2023",
+      "time": "10:00",
+      "petsAllowed": false,
+      "organizer": "Robert Green"
+    },
+    {
+      "id": 1012,
+      "category": "education",
+      "title": "Book Drive",
+      "description": "Collect and sort book donations for local schools and libraries.",
+      "location": "Community Center",
+      "date": "September 7, 2023",
+      "time": "12:00",
+      "petsAllowed": false,
+      "organizer": "Laura Swift"
+    },
+    {
+      "id": 1013,
+      "category": "health",
+      "title": "Fitness Awareness Campaign",
+      "description": "Spread awareness about the importance of fitness and healthy lifestyle.",
+      "location": "City Park",
+      "date": "July 28, 2023",
+      "time": "09:00",
+      "petsAllowed": true,
+      "organizer": "Oliver Black"
+    },
+    {
+      "id": 1014,
+      "category": "environment",
+      "title": "Garden Restoration",
+      "description": "Help restore and maintain the community garden.",
+      "location": "Community Garden",
+      "date": "August 9, 2023",
+      "time": "08:00",
+      "petsAllowed": false,
+      "organizer": "Fiona White"
+    },
+    {
+      "id": 1015,
+      "category": "community",
+      "title": "Senior Care Visit",
+      "description": "Spend time with seniors and assist with daily activities.",
+      "location": "City Senior Care Center",
+      "date": "August 2, 2023",
+      "time": "14:00",
+      "petsAllowed": false,
+      "organizer": "Paul Barker"
+    },
+    {
+      "id": 1016,
+      "category": "animal welfare",
+      "title": "Dog Walking",
+      "description": "Walk dogs for the local animal shelter.",
+      "location": "City Animal Shelter",
+      "date": "August 6, 2023",
+      "time": "10:00",
+      "petsAllowed": true,
+      "organizer": "Samantha Chen"
+    },
+    {
+      "id": 1017,
+      "category": "culture",
+      "title": "Heritage Festival Setup",
+      "description": "Help set up for the annual heritage festival.",
+      "location": "City Square",
+      "date": "September 20, 2023",
+      "time": "09:00",
+      "petsAllowed": false,
+      "organizer": "Mark Collins"
+    },
+    {
+      "id": 1018,
+      "category": "sustainability",
+      "title": "Community Garden Composting",
+      "description": "Help set up and maintain a composting system for the community garden.",
+      "location": "Community Garden",
+      "date": "August 16, 2023",
+      "time": "10:00",
+      "petsAllowed": false,
+      "organizer": "Lucy Brooks"
+    },
+    {
+      "id": 1019,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    },
+    {
+      "id": 1020,
+      "category": "education",
+      "title": "Coding Workshop for Kids",
+      "description": "Teach basic coding skills to kids at the local library.",
+      "location": "Public Library, Meeting Room 3",
+      "date": "August 10, 2023",
+      "time": "14:00",
+      "petsAllowed": false,
+      "organizer": "Elena Young"
+    },
+    {
+      "id": 1111,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    },
+    {
+      "id": 1119,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    },
+    {
+      "id": 1229,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    },
+    {
+      "id": 1449,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    },
+    {
+      "id": 1889,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    },
+    {
+      "id": 11119,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    },
+    {
+      "id": 1129,
+      "category": "health",
+      "title": "Cancer Awareness Walk",
+      "description": "Participate in a walk to spread awareness about cancer.",
+      "location": "City Park",
+      "date": "September 5, 2023",
+      "time": "08:00",
+      "petsAllowed": true,
+      "organizer": "William Gray"
+    }
+  ]
+}
