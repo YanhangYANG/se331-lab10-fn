@@ -2,22 +2,21 @@
   <RouterLink class="event-link" :to="{name: 'event-detail', params:{id: event?.id}}">
     <div class="event-class">
       <div class="event-card">
-        <span>@{{ event?.time }} on {{ event?.date }}</span>
-        <h4>{{ event?.title }}</h4>
-        <span>by</span>
-        <h5>{{ event?.organizer.name }}</h5>
+        <span>Item id:{{ event?.id}} </span>
+        <h4>Item Description:{{ event?.description }}</h4>
+        <h5>Type:{{ event?.type }}</h5>
       </div>
     </div>
   </RouterLink>
 </template>
 
 <script setup lang="ts">
-import type { EventItem } from '@/type'
+import type { AuctionItem } from '@/type'
 import type { EventOrganizer} from '@/type'
 import type { PropType } from 'vue'
 const props = defineProps({
   event: {
-    type: Object as PropType<EventItem>,
+    type: Object as PropType<AuctionItem>,
     required: true
   }
 })

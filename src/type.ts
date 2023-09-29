@@ -33,3 +33,15 @@ export interface OrgItem {
     address: string
 
 }
+
+export interface AuctionItem{
+    id: number
+    description: string
+    type: string
+}
+
+export interface BidItem{
+    id: number
+    amount: number
+    datetime: string
+}

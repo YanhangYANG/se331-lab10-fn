@@ -2,17 +2,17 @@
 import EventCard from '../components/EventCard.vue'
 import Cac from '../components/CaC.vue'
 
-import type { EventItem } from '@/type'
+import type { AuctionItem } from '@/type'
 
 import { computed, ref} from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
 import type { Ref } from 'vue'
 import axios, { type AxiosResponse } from 'axios'
-import EventService from '@/services/EventService'
+import AucService from '@/services/AucService'
 import NProgress from 'nprogress'
 import { useRouter } from 'vue-router'
 import BaseInput from "@/components/BaseInput.vue";
-const events = ref<EventItem[]>([])
+const events = ref<AuctionItem[]>([])
 
 const totalEvents = ref<number>(0)
 
@@ -28,15 +28,15 @@ const props = defineProps({
   size: {
     type: Number,
     required: false,
-    default: 4
+    default: 3
   }
 })
 
-EventService.getEvent(4, props.page).then((response: AxiosResponse<EventItem[]>) => {
+AucService.getAuctionItem(3, props.page).then((response: AxiosResponse<AuctionItem[]>) => {
   events.value = response.data
 })
 
-EventService.getEvent(4,props.page).then((response: AxiosResponse<EventItem[]>) => {
+AucService.getAuctionItem(3,props.page).then((response: AxiosResponse<AuctionItem[]>) => {
   events.value = response.data
   totalEvents.value = response.headers['x-total-count']
 }).catch((error) => {
@@ -45,18 +45,27 @@ EventService.getEvent(4,props.page).then((response: AxiosResponse<EventItem[]>) 
 })
 
 onBeforeRouteUpdate((to, from, next) => {
-  const topage = Number(to.query.page)
-  
-  EventService.getEvent(4, topage).then((response: AxiosResponse<EventItem[]>) => {
-    events.value = response.data
-    totalEvents.value = response.headers['x-total-count']
-    next()
-  }).catch(() => {
-    next({ name: 'NetworkError' })
-  
-    
-  })
-})
+  const toPage = Number(to.query.page);
+
+  let queryFunction;
+
+  if (keyword.value === null || keyword.value === '') {
+    queryFunction = AucService.getAuctionItem(3, toPage);
+  } else {
+    queryFunction = AucService.getEventByKeyword(keyword.value, 3, toPage);
+  }
+
+  queryFunction
+      .then((response: AxiosResponse<AuctionItem[]>) => {
+        events.value = response.data;
+        totalEvents.value = response.headers['x-total-count']; // Note: It should be totalEvents, not totalEvent
+        next();
+      })
+      .catch(() => {
+        next({ name: 'NetworkError' });
+      });
+});
+
 
 const hasNextPage = computed(() => {
   const totalPages = Math.ceil(totalEvents.value / props.size)
@@ -66,11 +75,11 @@ const hasNextPage = computed(() => {
 function updateKeyword (value: string) {
     let queryFunction;
     if (keyword.value === ''){
-        queryFunction = EventService.getEvent(3, 1)
+        queryFunction = AucService.getAuctionItem(3, 1)
           }else {
-        queryFunction = EventService.getEventByKeyword(keyword.value, 3, 1)
+        queryFunction = AucService.getEventByKeyword(keyword.value, 3, 1)
           }
-    queryFunction.then((response: AxiosResponse<EventItem[]>) => {
+    queryFunction.then((response: AxiosResponse<AuctionItem[]>) => {
         events.value = response.data
         console.log('events',events.value)
       totalEvents.value = response.headers['x-total-count']
