@@ -11,11 +11,14 @@ import axios, { type AxiosResponse } from 'axios'
 import EventService from '@/services/EventService'
 import NProgress from 'nprogress'
 import { useRouter } from 'vue-router'
+import BaseInput from "@/components/BaseInput.vue";
 const events = ref<EventItem[]>([])
 
 const totalEvents = ref<number>(0)
 
 const router = useRouter()
+
+const keyword = ref('')
 
 const props = defineProps({
   page: {
@@ -59,12 +62,33 @@ const hasNextPage = computed(() => {
   const totalPages = Math.ceil(totalEvents.value / props.size)
   return props.page.valueOf() < totalPages
 })
+
+function updateKeyword (value: string) {
+    let queryFunction;
+    if (keyword.value === ''){
+        queryFunction = EventService.getEvent(3, 1)
+          }else {
+        queryFunction = EventService.getEventByKeyword(keyword.value, 3, 1)
+          }
+    queryFunction.then((response: AxiosResponse<EventItem[]>) => {
+        events.value = response.data
+        console.log('events',events.value)
+      totalEvents.value = response.headers['x-total-count']
+            console.log('totalEvent',totalEvents.value)
+          }).catch(() => {
+        router.push({ name: 'NetworkError' })
+      })
+  }
+
 </script>
 
 <template>
   <h1>Event For Good</h1>
 
-  <main class="events">
+  <main class="flex flex-col items-center">
+    <div class="w-64">
+    <BaseInput v-model="keyword" type="text" label="Search..." @input="updateKeyword" class="w-full"  />
+    </div>
     <EventCard v-for="event in events" :key="event.id" :event="event"></EventCard>
     <div class="pagination">
       <RouterLink
